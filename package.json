@@ -1,0 +1,19 @@
+{
+  "name": "gaia",
+  "version": "1.0.0",
+  "description": "Sistema de implantação remota",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-chart.js": "^1.0.0",
+    "angular-material": "^1.1.0-rc.5",
+    "material-steppers": "^1.0.2"    
+  }
+}

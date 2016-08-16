@@ -1,0 +1,77 @@
+<div layout="row" flex="100">
+						<div layout="column" flex="66" layout-sm="row" flex-sm="100" layout-xs="row" flex-xs="100">
+							<md-card>
+						        <md-card-title>
+						          	<md-card-title-text>
+						            	<span class="md-headline">Implantação</span>						            	
+						          	</md-card-title-text>	
+						        </md-card-title>			
+						        <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick"></canvas> 				        
+					      	</md-card>
+						</div>
+						<div layout="column" flex="33" flex-sm="100" flex-xs="100">
+							<div layout="column" flex="100"  layout-sm="row" layout-xs="row">
+								<md-card >
+								 <md-card-title>
+						          	<md-card-title-text>
+						            	<span class="md-headline">Reuniões</span>						            	
+						          	</md-card-title-text>	
+						        </md-card-title>	
+									<md-table-container>
+									  <table md-table md-row-select multiple ng-model="selected" md-progress="promise" flex='100' flex-sm="100" flex-xs="100">
+									    <thead md-head>
+									      <tr md-row>
+									        <th md-column><span>Data</span></th>
+									        <th md-column><span>Titulo</span></th>
+									        <th md-column>Ata</th>									        
+									      </tr>
+									    </thead>
+									    <tbody md-body>
+									      <tr md-row md-select="reuniao" md-select-id="name" md-auto-select  ng-repeat="reuniao in reunioes">
+									        <td md-cell>{{reuniao.data | date:'dd/MM/yyyy'}}</td>
+									        <td md-cell>{{reuniao.titulo}}</td>
+									        <td md-cell>{{reuniao.ata}}</td>									        
+									      </tr>
+									    </tbody>
+									  </table>
+									</md-table-container>
+						      	</md-card>
+							</div>
+							<div layout="column" flex="100"  layout-sm="row" layout-xs="row">
+								<md-card >
+								 <md-card-title>
+						          	<md-card-title-text>
+						            	<span class="md-headline">Aviso</span>						            	
+						          	</md-card-title-text>	
+						        </md-card-title>	
+									<md-table-container>
+									  <table md-table md-row-select multiple ng-model="selected" md-progress="promise" flex='100'>
+									    <thead md-head>
+									      <tr md-row>
+									        <th md-column><span>Data</span></th>
+									        <th md-column><span>Descrição</span></th>
+									      </tr>
+									    </thead>
+									    <tbody md-body>
+									      <tr md-row md-select="reuniao" md-select-id="name" md-auto-select  ng-repeat="aviso in avisos">
+									        <td md-cell>{{aviso.data | date:'dd/MM/yyyy'}}</td>
+									        <td md-cell>{{aviso.descricao}}</td>									        
+									      </tr>
+									    </tbody>
+									  </table>
+									</md-table-container>
+						      	</md-card>
+							</div>
+						</div>
+					</div>
+					<div layout="column" flex="100" >
+						<md-card>
+				     			<md-stepper id="stepper-demo" >
+								    <md-step md-label="{{etapa.label}}"  ng-repeat="etapa in etapas" >
+								        <md-content></md-content>
+								    </md-step>							    
+								</md-stepper>
+				     		</md-card>
+					</div>
+
+				</div>

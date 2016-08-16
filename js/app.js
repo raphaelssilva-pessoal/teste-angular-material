@@ -1,0 +1,1 @@
+angular.module('gaiaApp', ["ngMaterial","chart.js", "mdSteppers", 'md.data.table', "ngRoute"]);
